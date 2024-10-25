@@ -20,14 +20,24 @@
             text-align: center;
         }
         nav {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 20px 0;
+            gap: 15px;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+        .nav-right {
+            margin-left: auto; /* Pushes Contact Us to the far right */
         }
         nav a {
-            margin: 0 15px;
             color: #001F3F; /* Neurym blue */
             text-decoration: none;
             font-weight: bold;
+            padding: 5px 10px;
         }
         main {
             padding: 20px;
@@ -47,11 +57,6 @@
             width: 100%;
             bottom: 0;
         }
-        img {
-            max-width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
         ul {
             list-style-type: none;
             padding: 0;
@@ -63,12 +68,22 @@
 </head>
 <body>
     <header>
-        <img src="images/neurym-logo.png" alt="Neurym Logo">
+        <h1>About Neurym</h1>
     </header>
     
     <nav>
-        <a href="/">Home</a> | 
-        <a href="/about.html">About Us</a>
+        <!-- Left aligned navigation links -->
+        <div class="nav-left">
+            <a href="/">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/features.html">Features</a>
+            <a href="/blog.html">Blog</a>
+        </div>
+        
+        <!-- Right aligned "Contact Us" link -->
+        <div class="nav-right">
+            <a href="/contact.html">Contact Us</a>
+        </div>
     </nav>
 
     <main>
