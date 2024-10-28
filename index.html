@@ -12,7 +12,6 @@
             padding: 0;
             background-color: #F5F5F5; /* Very light gray background */
             color: #001F3F; /* Neurym blue for text */
-            position: relative;
         }
         header {
             background-color: #001F3F; /* Neurym dark blue */
@@ -28,13 +27,6 @@
             padding: 15px 30px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for style */
         }
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-        }
-        .nav-right {
-            margin-left: auto;
-        }
         nav a {
             color: #FFFFFF; /* White text for visibility */
             text-decoration: none;
@@ -49,44 +41,33 @@
             background-color: #0055a5; /* Darker blue on hover */
         }
         main {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            height: 80vh;
         }
-        .top-left-content, .bottom-right-content {
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .content {
             width: 45%;
-            position: absolute;
-        }
-        .top-left-content {
-            top: 0;
-            left: 0;
-        }
-        .bottom-right-content {
-            bottom: 0;
-            right: 0;
-        }
-        .content p {
-            text-indent: 0; /* Removes indentation */
+            margin: 10px;
         }
         h2 {
             color: #001F3F; /* Neurym blue */
         }
-        .right-top-quadrant {
+        .right-top-image {
             width: 30%; /* Smaller image */
-            position: absolute;
-            top: 20px;
-            right: 40px; /* Adjusted to ensure no overlap */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            align-self: flex-start;
+            margin-top: 20px;
         }
-        .bottom-left-quadrant {
+        .bottom-left-image {
             width: 30%; /* Smaller image */
-            position: absolute;
-            bottom: 20px;
-            left: 40px; /* Adjusted to ensure no overlap */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            align-self: flex-end;
+            margin-bottom: 20px;
         }
         footer {
             background-color: #001F3F; /* Neurym dark blue */
@@ -112,40 +93,37 @@
     </header>
     
     <nav>
-        <div class="nav-left">
-            <a href="/">Home</a>
-            <a href="/index.html">About Us</a>
-            <a href="/team.html">Team</a>
-            <a href="/features.html">Features</a>
-            <a href="/blog.html">Blog</a>
-        </div>
-        
-        <div class="nav-right">
-            <a href="/contact.html">Contact Us</a>
-        </div>
+        <a href="/">Home</a>
+        <a href="/index.html">About Us</a>
+        <a href="/team.html">Team</a>
+        <a href="/features.html">Features</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact Us</a>
     </nav>
 
     <main>
-        <!-- About Us in the top left -->
-        <div class="top-left-content">
-            <h2>About Neurym</h2>
-            <p>Neurym is an emerging startup focused on transforming the disability market through innovative software and technology solutions. We are developing a Minimum Viable Product (MVP) and conducting interviews to gather valuable insights, helping us craft software solutions that meet the needs of the disability community.</p>
+        <div class="section-container">
+            <!-- About Us in the top-left quadrant -->
+            <div class="content">
+                <h2>About Neurym</h2>
+                <p>Neurym is an emerging startup focused on transforming the disability market through innovative software and technology solutions. We are developing a Minimum Viable Product (MVP) and conducting interviews to gather valuable insights, helping us craft software solutions that meet the needs of the disability community.</p>
+            </div>
+
+            <!-- Our Goals in the bottom-right quadrant -->
+            <div class="content">
+                <h2>Our Goals</h2>
+                <ul>
+                    <li>Provide a one-stop platform marketplace for products and services for individuals with disabilities.</li>
+                    <li>Deliver accessible, real-time solutions for disability-related information, ranging from education to employment.</li>
+                    <li>Offer a platform for rating and reviewing disability services and resources with reliable feedback.</li>
+                    <li>Provide an engaging platform for discussing and sharing insights on disability services and experiences.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Our Goals in the bottom right -->
-        <div class="bottom-right-content">
-            <h2>Our Goals</h2>
-            <ul>
-                <li>Provide a one-stop platform marketplace for products and services for individuals with disabilities.</li>
-                <li>Deliver accessible, real-time solutions for disability-related information, ranging from education to employment.</li>
-                <li>Offer a platform for rating and reviewing disability services and resources with reliable feedback.</li>
-                <li>Provide an engaging platform for discussing and sharing insights on disability services and experiences.</li>
-            </ul>
-        </div>
-        
-        <!-- Images -->
-        <img src="images/noa1.webp" alt="Neurym Image 1" class="right-top-quadrant">
-        <img src="images/noa2.webp" alt="Neurym Image 2" class="bottom-left-quadrant">
+        <!-- Images placed separately in corners -->
+        <img src="images/noa1.webp" alt="Neurym Image 1" class="right-top-image">
+        <img src="images/noa2.webp" alt="Neurym Image 2" class="bottom-left-image">
     </main>
 
     <footer>
@@ -153,5 +131,6 @@
     </footer>
 </body>
 </html>
+
 
 
