@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #F5F5F5; /* Very light gray background */
             color: #001F3F; /* Neurym blue for text */
+            position: relative; /* Needed for positioning the image */
         }
         header {
             background-color: #001F3F; /* Neurym dark blue */
@@ -52,6 +53,7 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative; /* Needed for positioning the image */
         }
         main p {
             text-indent: 40px; /* Regular indentation for paragraph */
@@ -59,6 +61,15 @@
         }
         h2 {
             color: #001F3F; /* Neurym blue */
+        }
+        /* Style for the image placed in the right top quadrant */
+        .right-top-quadrant {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 25%; /* Restricts the size of the image */
+            border-radius: 10px; /* Optional: adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
         }
         footer {
             background-color: #001F3F; /* Neurym dark blue */
@@ -84,7 +95,6 @@
     </header>
     
     <nav>
-        <!-- Left aligned navigation links -->
         <div class="nav-left">
             <a href="/">Home</a>
             <a href="/index.html">About Us</a>
@@ -92,7 +102,6 @@
             <a href="/blog.html">Blog</a>
         </div>
         
-        <!-- Right aligned "Contact Us" link -->
         <div class="nav-right">
             <a href="/contact.html">Contact Us</a>
         </div>
@@ -109,6 +118,9 @@
             <li>Offer a platform for rating and reviewing disability services and resources with reliable feedback.</li>
             <li>Provide an engaging platform for discussing and sharing insights on disability services and experiences.</li>
         </ul>
+        
+        <!-- Added image in the right top quadrant -->
+        <img src="images/noa.webp" alt="Neurym Image" class="right-top-quadrant">
     </main>
 
     <footer>
