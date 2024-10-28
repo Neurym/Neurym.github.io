@@ -12,7 +12,6 @@
             padding: 0;
             background-color: #F5F5F5; /* Very light gray background */
             color: #001F3F; /* Neurym blue for text */
-            position: relative; /* Needed for positioning the image */
         }
         header {
             background-color: #001F3F; /* Neurym dark blue */
@@ -49,15 +48,15 @@
             background-color: #0055a5; /* Darker blue on hover */
         }
         main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative; /* Needed for positioning the image */
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .content {
-            max-width: 60%; /* Limits paragraph width */
+            width: 60%; /* Sets a width for the text content */
             text-align: left;
         }
         .content p {
@@ -66,14 +65,10 @@
         h2 {
             color: #001F3F; /* Neurym blue */
         }
-        /* Style for the image placed in the right top quadrant */
         .right-top-quadrant {
-            position: absolute;
-            top: 10px;
-            right: -50px; /* Moves image further to the right */
-            max-width: 50%; /* Makes the image approximately 2x larger */
-            border-radius: 10px; /* Optional: adds rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
+            width: 35%; /* Makes the image larger */
+            margin-left: 20px; /* Adds space between the text and the image */
+            align-self: flex-start; /* Aligns image to the top of the section */
         }
         footer {
             background-color: #001F3F; /* Neurym dark blue */
@@ -125,7 +120,7 @@
             </ul>
         </div>
         
-        <!-- Added image in the right top quadrant -->
+        <!-- Added image next to the content, not overlapping -->
         <img src="images/noa.webp" alt="Neurym Image" class="right-top-quadrant">
     </main>
 
