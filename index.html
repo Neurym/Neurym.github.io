@@ -52,12 +52,16 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
             position: relative; /* Needed for positioning the image */
+            display: flex;
+            justify-content: space-between;
         }
-        main p {
+        .content {
+            max-width: 60%; /* Limits paragraph width */
+            text-align: left;
+        }
+        .content p {
             text-indent: 40px; /* Regular indentation for paragraph */
-            text-align: center; /* Keeps the paragraph centered */
         }
         h2 {
             color: #001F3F; /* Neurym blue */
@@ -66,8 +70,8 @@
         .right-top-quadrant {
             position: absolute;
             top: 10px;
-            right: 10px;
-            max-width: 25%; /* Restricts the size of the image */
+            right: -50px; /* Moves image further to the right */
+            max-width: 50%; /* Makes the image approximately 2x larger */
             border-radius: 10px; /* Optional: adds rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
         }
@@ -108,16 +112,18 @@
     </nav>
 
     <main>
-        <h2>About Neurym</h2>
-        <p>Neurym is an emerging startup focused on transforming the disability market through innovative software and technology solutions. We are developing a Minimum Viable Product (MVP) and conducting interviews to gather valuable insights, helping us craft software solutions that meet the needs of the disability community.</p>
-        
-        <h2>Our Goals</h2>
-        <ul>
-            <li>Provide a one-stop platform marketplace for products and services for individuals with disabilities.</li>
-            <li>Deliver accessible, real-time solutions for disability-related information, ranging from education to employment.</li>
-            <li>Offer a platform for rating and reviewing disability services and resources with reliable feedback.</li>
-            <li>Provide an engaging platform for discussing and sharing insights on disability services and experiences.</li>
-        </ul>
+        <div class="content">
+            <h2>About Neurym</h2>
+            <p>Neurym is an emerging startup focused on transforming the disability market through innovative software and technology solutions. We are developing a Minimum Viable Product (MVP) and conducting interviews to gather valuable insights, helping us craft software solutions that meet the needs of the disability community.</p>
+            
+            <h2>Our Goals</h2>
+            <ul>
+                <li>Provide a one-stop platform marketplace for products and services for individuals with disabilities.</li>
+                <li>Deliver accessible, real-time solutions for disability-related information, ranging from education to employment.</li>
+                <li>Offer a platform for rating and reviewing disability services and resources with reliable feedback.</li>
+                <li>Provide an engaging platform for discussing and sharing insights on disability services and experiences.</li>
+            </ul>
+        </div>
         
         <!-- Added image in the right top quadrant -->
         <img src="images/noa.webp" alt="Neurym Image" class="right-top-quadrant">
