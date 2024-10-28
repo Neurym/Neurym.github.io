@@ -12,7 +12,7 @@
             padding: 0;
             background-color: #F5F5F5; /* Very light gray background */
             color: #001F3F; /* Neurym blue for text */
-            position: relative; /* For positioning images */
+            position: relative;
         }
         header {
             background-color: #001F3F; /* Neurym dark blue */
@@ -49,17 +49,22 @@
             background-color: #0055a5; /* Darker blue on hover */
         }
         main {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            position: relative;
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto;
-            position: relative;
         }
-        .content {
-            width: 60%; /* Sets a width for the text content */
-            text-align: left;
+        .top-left-content, .bottom-right-content {
+            width: 45%;
+            position: absolute;
+        }
+        .top-left-content {
+            top: 0;
+            left: 0;
+        }
+        .bottom-right-content {
+            bottom: 0;
+            right: 0;
         }
         .content p {
             text-indent: 0; /* Removes indentation */
@@ -68,15 +73,18 @@
             color: #001F3F; /* Neurym blue */
         }
         .right-top-quadrant {
-            width: 40%; /* Slightly bigger image */
-            margin-left: 40px; /* Adds space between the text and the image */
-            align-self: flex-start; /* Aligns image to the top of the section */
+            width: 30%; /* Smaller image */
+            position: absolute;
+            top: 20px;
+            right: 40px; /* Adjusted to ensure no overlap */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .bottom-left-quadrant {
+            width: 30%; /* Smaller image */
             position: absolute;
             bottom: 20px;
-            left: 20px;
-            width: 40%; /* Same size as the right-top image */
+            left: 40px; /* Adjusted to ensure no overlap */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -118,10 +126,14 @@
     </nav>
 
     <main>
-        <div class="content">
+        <!-- About Us in the top left -->
+        <div class="top-left-content">
             <h2>About Neurym</h2>
             <p>Neurym is an emerging startup focused on transforming the disability market through innovative software and technology solutions. We are developing a Minimum Viable Product (MVP) and conducting interviews to gather valuable insights, helping us craft software solutions that meet the needs of the disability community.</p>
-            
+        </div>
+
+        <!-- Our Goals in the bottom right -->
+        <div class="bottom-right-content">
             <h2>Our Goals</h2>
             <ul>
                 <li>Provide a one-stop platform marketplace for products and services for individuals with disabilities.</li>
@@ -131,7 +143,7 @@
             </ul>
         </div>
         
-        <!-- Added images in the specified quadrants -->
+        <!-- Images -->
         <img src="images/noa1.webp" alt="Neurym Image 1" class="right-top-quadrant">
         <img src="images/noa2.webp" alt="Neurym Image 2" class="bottom-left-quadrant">
     </main>
@@ -141,4 +153,5 @@
     </footer>
 </body>
 </html>
+
 
